@@ -6,7 +6,7 @@
 /*   By: jlinguet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 11:25:49 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/10 07:33:18 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/10 17:01:18 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,13 @@ char	*ft_itoa(int n)
 		return (s);
 	}
 
-	
+	if (n < 0)
+	{
+		ft_putchar_fd('-', 1);
+		n *= -1;
+	}
+	while (n > 9)
+	{
 
-	return ("travaux\n");
+	return ("lol");
 }
