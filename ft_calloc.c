@@ -6,7 +6,7 @@
 /*   By: jlinguet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 16:54:28 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/08 18:25:56 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:08:12 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
+	if (nmemb > UINT_MAX / size)
+	{
+		errno = ENOMEM;
+		return (NULL);
+	}
 	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);

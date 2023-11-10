@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlinguet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 17:25:02 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/10 10:29:09 by jlinguet         ###   ########.fr       */
+/*   Created: 2023/11/10 13:19:39 by jlinguet          #+#    #+#             */
+/*   Updated: 2023/11/10 13:41:22 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	ft_memset(s, 0, n);
+	if (!n)
+		return (0);
+	while (n && (int *)s1 == (int *)s2 && s1)
+	{
+		n--;
+		s1++;
+		s2++;
+	}
+	return ((int *)s1 - (int *)s2);
 }
