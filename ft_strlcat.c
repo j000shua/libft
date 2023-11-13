@@ -1,43 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlinguet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 11:57:43 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/12 08:27:48 by jlinguet         ###   ########.fr       */
+/*   Created: 2023/11/12 07:29:22 by jlinguet          #+#    #+#             */
+/*   Updated: 2023/11/13 07:27:50 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	*ft_memrcpy(void *dest, const void *src, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned char	*p;
-
-	src += n - 1;
-	p = dest + n - 1;
-	while (n)
-	{
-		*p = *(unsigned char *)src;
-		n--;
-		p--;
-		src--;
-	}
-	return (dest);
-}
-
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
+	size_t	dst_len;
 	size_t	i;
 
-	i = 0;
-	while (i < n)
+	if (!dst || !src)
+		return (0);
+	dst_len = ft_strlen(dst);
+	if (size <= dst_len)
+		return (size + ft_strlen(src));
+	if (size <= dst_len + ft_strlen(src))
 	{
-		if (dest == src + i)
-			return (ft_memrcpy(dest, src, n));
-		i++;
+		i = 0;
+		while (i < size - dst_len - 1)
+		{
+			*(dst + dst_len + i) = src[i];
+			i++;
+		}
+		return (dst_len + ft_strlen(src));
 	}
-	return (ft_memcpy(dest, src, n));
+	return (dst_len + ft_strlcpy(dst + dst_len, src, size - dst_len));
 }

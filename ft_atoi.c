@@ -6,11 +6,11 @@
 /*   By: jlinguet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 13:20:12 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/07 13:52:31 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/12 07:26:18 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == ' ' || (c >= '\t' && c <= '\r'))
 		return (1);

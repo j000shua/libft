@@ -6,7 +6,7 @@
 /*   By: jlinguet <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 07:54:32 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/09 10:09:50 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/11 08:59:21 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (ft_strlen(s) < start)
 	{
-		substr = malloc(1 * sizeof(char));
+		substr = ft_calloc(1, sizeof(char));
 		substr[0] = '\0';
 		return (substr);
 	}
 	if (ft_strlen(&s[start]) < len)
-		substr = malloc((ft_strlen(&s[start]) + 1) * sizeof(char));
+		substr = ft_calloc((ft_strlen(&s[start]) + 1), sizeof(char));
 	else
-		substr = malloc((len + 1) * sizeof(char));
+		substr = ft_calloc((len + 1), sizeof(char));
 	if (!substr)
 		return (NULL);
 	i = 0;
