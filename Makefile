@@ -37,7 +37,7 @@ SRCS = ft_strlen.c \
 
 OBJS = ${SRCS:.c=.o}
 
-CFLAGS = -Wall -Wextra -Werror -include libft.h 
+CFLAGS = -Wall -Wextra -Werror 
 
 ${NAME}:	${OBJS}
 	ar -rc ${NAME} ${OBJS}
