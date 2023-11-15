@@ -6,7 +6,7 @@
 /*   By: jlinguet <jlinguet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:31:18 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/13 11:31:24 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/15 08:28:09 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ char	*ft_itoa(int n);
 void	ft_bzero(void *s, size_t n);
 
 void	*ft_calloc(size_t nmemb, size_t size);
+
+typedef unsigned char	t_uchar;
 
 typedef struct s_list
 {

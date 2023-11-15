@@ -6,7 +6,7 @@
 /*   By: jlinguet <jlinguet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:55:04 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/13 10:55:06 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:45:49 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ char	*ft_itoa(int n)
 	char	*s;
 	int		i;
 
+	if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
 	s = ft_calloc((ft_intlen(n) + 1), sizeof(char));
 	if (!s)
 		return (NULL);
-	if (n == INT_MIN)
-		return (ft_strdup("-2147483648"));
 	if (n < 0)
 	{
 		s[0] = '-';
