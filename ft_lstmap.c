@@ -6,7 +6,7 @@
 /*   By: jlinguet <jlinguet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 12:43:54 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/16 13:08:17 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:25:34 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int	size;
+	int		size;
 	t_list	*new;
 
 	new = NULL;
@@ -24,7 +24,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&new, ft_lstnew(f(lst->content)));
 		if (!ft_lstlast(new)->content)
 			del(ft_lstlast(new)->content);
-		lst = lst->next;	
+		lst = lst->next;
 		size--;
 	}
 	return (new);

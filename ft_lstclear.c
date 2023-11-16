@@ -6,7 +6,7 @@
 /*   By: jlinguet <jlinguet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 10:46:30 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/16 12:32:23 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:24:28 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	ft_lstdelone(ft_lstlast(*first), del);
 	*first = NULL;
- }
+}
