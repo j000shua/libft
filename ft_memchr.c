@@ -6,7 +6,7 @@
 /*   By: jlinguet <jlinguet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:55:22 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/13 13:39:25 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/17 10:59:09 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	while (n)
 	{
-		if (*(unsigned char *)s == (unsigned char)c)
+		if (*(t_uchar *)s == (t_uchar)c)
 			return ((void *)s);
 		n--;
 		s++;

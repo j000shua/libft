@@ -6,13 +6,11 @@
 /*   By: jlinguet <jlinguet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:54:00 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/13 10:54:03 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/17 10:55:15 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	return (c >= 0 && c <= 127);
 }

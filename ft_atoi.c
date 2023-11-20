@@ -6,15 +6,13 @@
 /*   By: jlinguet <jlinguet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:48:59 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/13 10:49:06 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/17 10:29:38 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 static int	ft_isspace(char c)
 {
-	if (c == ' ' || (c >= '\t' && c <= '\r'))
-		return (1);
-	return (0);
+	return (c == ' ' || (c >= '\t' && c <= '\r'));
 }
 
 int	ft_atoi(const char *nptr)

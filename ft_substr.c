@@ -6,7 +6,7 @@
 /*   By: jlinguet <jlinguet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 11:04:47 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/13 11:04:49 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/17 08:26:32 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (ft_strlen(s) < start)
 	{
 		substr = ft_calloc(1, sizeof(char));
+		if (!substr)
+			return (NULL);
 		substr[0] = '\0';
 		return (substr);
 	}

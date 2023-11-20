@@ -6,13 +6,11 @@
 /*   By: jlinguet <jlinguet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 10:54:17 by jlinguet          #+#    #+#             */
-/*   Updated: 2023/11/13 10:54:20 by jlinguet         ###   ########.fr       */
+/*   Updated: 2023/11/17 10:55:45 by jlinguet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }
